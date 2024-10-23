@@ -1,0 +1,109 @@
+body {
+    background: linear-gradient(to right, #3b3c5c, #9ea9a5); /* Darker tone, health-related */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin: 5% auto;
+    padding: 4% 2%;
+    background-color: rgba(52, 73, 94, 0.9); /* Calming blue tones */
+    color: #ecf0f1; /* Softer text */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path/to/your/aging-pattern.png'); /* Replace with a subtle health-related background */
+    background-size: cover;
+    opacity: 0.3;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.container > * {
+    position: relative; 
+    z-index: 1; 
+}
+
+#currDate {
+    font-size: 30px;
+    margin: 10px;
+    font-weight: bold;
+    color: #ffd700; /* Golden touch for age representation */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+input {
+    font-size: 18px;
+    padding: 12px;
+    margin: 15px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid #e67e22; /* Warm tone */
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #e74c3c; /* Alert tone when active */
+    outline: none;
+}
+
+button {
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f39c12; /* Golden accent for interaction */
+    color: white;
+    margin: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+#displayAge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 450px;
+    background-color: rgba(189, 195, 199, 0.9); /* Light neutral background for clarity */
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+#age {
+    color: #2c3e50; /* Stronger contrast */
+    font-size: 40px;
+    margin: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+#sideEffects {
+    font-size: 24px;
+    color: #e74c3c;
+    text-align: center;
+    margin: 10px;
+}
